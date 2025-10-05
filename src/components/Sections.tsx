@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { trackEvent } from '../lib/analytics'
 import { supabase } from '../lib/supabase'
-import { Zap, BarChart3, ShieldX, Search, DraftingCompass, Rocket, Flag, Info, Check, Clock, BarChart, FileText, Gavel, Users, Lock, CheckCircle2, Send, Github, Linkedin, Dribbble, Twitter } from 'lucide-react'
+import { Zap, ChartBar as BarChart3, ShieldX, Search, DraftingCompass, Rocket, Flag, Info, Check, Clock, ChartBar as BarChart, FileText, Gavel, Users, Lock, CircleCheck as CheckCircle2, Send, Github, Linkedin, Dribbble, Twitter } from 'lucide-react'
 
 export const Thesis = () => {
   const { elementRef, isVisible } = useIntersectionObserver()
