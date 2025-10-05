@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #010203;
+    color: #E6EDF3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, .font-serif {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(180, 180, 180, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(100, 100, 100, 0.03) 0%, transparent 40%),
+      radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 24px 24px;
+  }
+
+  .glassy-card {
+    background: linear-gradient(180deg, rgba(20, 22, 25, .5), rgba(5, 6, 7, .6));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
+  }
+
+  .primary-btn {
+    box-shadow: 0 10px 25px rgba(200, 200, 200, .2), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  }
+
+  .header-scrim {
+    background: linear-gradient(to bottom, rgba(2, 3, 5, 0.8), transparent);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .section-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .section-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #E6EDF3;
+    transition: all 0.25s ease-out;
+    transform: translateX(-50%);
+  }
+
+  .nav-link-underline:hover::after {
+    width: 100%;
+  }
+
+  .instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-fade-up {
+    transition: none;
+  }
+}
