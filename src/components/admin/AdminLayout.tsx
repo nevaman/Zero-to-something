@@ -1,21 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import {
-  LayoutDashboard,
-  FileText,
-  Users,
-  Settings,
-  BarChart3,
-  LogOut,
-  Menu,
-  X,
-  Package,
-  Briefcase,
-  MessageSquare,
-  BookOpen,
-  Clock,
-  Target,
-} from 'lucide-react'
+import { LayoutDashboard, FileText, Users, Settings, ChartBar as BarChart3, LogOut, Menu, X, Package, Briefcase, MessageSquare, BookOpen, Clock, Target } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
 
 interface AdminLayoutProps {
