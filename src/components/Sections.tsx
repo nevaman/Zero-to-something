@@ -430,7 +430,7 @@ export const Team = () => {
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-fgMuted mt-12 font-mono">"Execution > theory."</p>
+        <p className="text-center text-sm text-fgMuted mt-12 font-mono">"Execution &gt; theory."</p>
       </div>
     </section>
   )
@@ -458,7 +458,7 @@ export const Testimonials = () => {
     <section id="testimonials" ref={elementRef as React.RefObject<HTMLElement>} className={'py-16 md:py-24 section-fade-up ' + (isVisible ? 'visible' : '')}>
       <div className="bg-black/20 py-20">
         <div className="container mx-auto max-w-[1200px] px-6 md:px-8 text-center">
-          <h2 className="text-3xl font-normal mb-2">Proof > Promises</h2>
+          <h2 className="text-3xl font-normal mb-2">Proof &gt; Promises</h2>
           <p className="text-fgMuted mb-12">What our partners say.</p>
           <div className="relative max-w-2xl mx-auto">
             {testimonials.length > 0 && (
